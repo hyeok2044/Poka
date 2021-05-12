@@ -23,7 +23,7 @@ public class Deck {
 			}
 		}
 
-		System.out.println("init finished.");
+//		System.out.println("init finished.");
 	}
 
 	public void printDeck() {
@@ -54,7 +54,7 @@ public class Deck {
 
 	public void Shuffle() {
 		Collections.shuffle(deck);
-		System.out.println("shuffled");
+//		System.out.println("shuffled");
 	}
 
 	public Card draw() {

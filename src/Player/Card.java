@@ -2,19 +2,19 @@ package Player;
 
 class Card {
 
-	int shape;
-	int number;
+	int shape, number, value;
 
 	public Card(int shape, int number) {
 		this.shape = shape;
 		this.number = number;
+		this.value = shape * 14 + number;
 	}
 
 	public String returnShape() {
 		if (shape == 1) {
-			return "Heart";
-		} else if (shape == 2) {
 			return "Clover";
+		} else if (shape == 2) {
+			return "Heart";
 		} else if (shape == 3) {
 			return "Diamond";
 		} else if (shape == 4) {
@@ -45,9 +45,9 @@ class Card {
 
 	public String returnShapeSimple() {
 		if (shape == 1) {
-			return "♥";
-		} else if (shape == 2) {
 			return "♣";
+		} else if (shape == 2) {
+			return "♥";
 		} else if (shape == 3) {
 			return "◆";
 		} else if (shape == 4) {
@@ -82,5 +82,9 @@ class Card {
 
 	public String toStringSimple() {
 		return returnShapeSimple() + " " + returnNumberSimple();
+	}
+
+	public int getValue() {
+		return value;
 	}
 }
